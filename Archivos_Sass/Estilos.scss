@@ -1,0 +1,112 @@
+$num : 1;
+$size: 30px;
+$time: 20s;
+
+//strings
+$name: "Lorenz";
+$value:  block;
+
+//colors
+$red_color : red;
+$rgb_color : rgb(100,100,50);
+$color_hex: #2f890a;
+
+$sex : "H";
+$ancho : 80%;
+
+body{
+    @if $sex =="H" {background-color: rgb(73, 126, 196)}
+    @else {background-color: rgb(255, 160, 247);}
+}
+
+header{
+    width: $ancho;
+    height: auto;
+    background-color: orangered;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform:  uppercase;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+nav{
+    width: $ancho;
+    margin: 0 auto;
+    height: auto;
+    background-color: rgb(92, 33, 33);
+    color: whitesmoke;
+    margin-top: 5px;
+    text-align: center;
+    padding-top: 5px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+$tipo_lista: none;
+nav ul{
+    list-style: $tipo_lista;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    color: whitesmoke;
+    padding-right: 10px;
+}
+aside{
+    background-color: chocolate;
+    color: whitesmoke;
+    width: 15%;
+    margin-left: 10%;
+    padding-bottom: 10px;
+    float: left;
+    margin-top: 1%;
+}
+
+$alto_iamgen : 100px;
+$ancho_iamgen : 100px;
+$borde : 1px solid black;
+aside img{
+    margin: 10px auto;
+    display: block;
+    width: $ancho_iamgen;
+    height: $alto_iamgen;
+    border-radius: 50%;
+    border: $borde;
+}
+
+section{
+    margin-top: 1%;
+    background-color: rgb(133, 26, 26);
+    color: whitesmoke;
+    height: auto;
+    width: 64%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    float: left;
+    border-radius: 5px;
+}
+
+$margen_articulo : 5px 5px 5px 5px;
+article{
+    border-radius: 5px;
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    margin: $margen_articulo;
+}
+
+footer{
+    clear:both;
+    margin : 0 auto;
+    text-align: center;
+    background-color: darkgreen;
+    color: white;
+    width: $ancho;
+    border: 2px solid black;
+}
