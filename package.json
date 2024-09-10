@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug":"pug -w ./Archivos_Pug/Principal.pug -o ./Resultado_Final -p",
+    "pug":"pug -w ./Archivos_Pug/Principal.pug -o ./Resultado_Final -P",
     "scss":"sass -w ./Archivos_Sass/Estilos.scss ./Resultado_Final/Estilos.css"
   },
   "author": "Lorenz",

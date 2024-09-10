@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title Practica PUG Y SASS
+    body
+        //Definicion de variables
+        - var nombre_pagina = "Pagina Principal"
+        - var nombre_empresa = "Mapaches Salvajes"
+        - var nombre_usuario = "Lorenz"
+        - var sexo = "H"
+        - var edad = 28
+        - var autor = "Lorenzo Vazquez Ramos"
+        
+        //Definicion de arreglos
+        - var paginas = ['Principal','Inventario','Contacto','Ventas','Usuarios']
+
+        //Colocando parrafo por cada elemento
+
+        header
+            p= nombre_pagina
+            p= nombre_empresa
+
+        //Para el elemento nav, se recorre el arreglo con heac y cada elemento agrega un hypervinculo
+        //Para variables se asigna de dos formas etiqueta=nombre o #{nombre_variable}
+        nav
+            ul
+                each pagina in paginas
+                    li
+                        a(href=pagina + ".html") #{pagina}
+        //Se realiza validacion de sexo, Si es H se muestra imagen de hombre
+        //en caso contrario, mujer
+
+        aside
+            if sexo =='H'
+                img(src="../Recursos/hombre.png")
+            else
+                img(src="../Recursos/Mujer.png")
+            br
+            div
+                span= "Nombre: " + nombre_usuario
+                br
+                span= "Edad" + edad
+
+        section
+            article
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            article
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            article
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        footer
+            span= autor
