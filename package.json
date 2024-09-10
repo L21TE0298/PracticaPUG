@@ -1,0 +1,13 @@
+{
+  "name": "practicapug",
+  "version": "1.0.0",
+  "description": "Practica de PUG y SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug":"pug -w ./Archivos_Pug/Principal.pug -o ./Resultado_Final -p",
+    "scss":"sass -w ./Archivos_Sass/Estilos.scss ./Resultado_Final/Estilos.css"
+  },
+  "author": "Lorenz",
+  "license": "ISC"
+}
